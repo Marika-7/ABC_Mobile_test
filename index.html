@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test IQ</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <button onclick="toggleMenu()">
+            <img src="./images/menu-open.svg" alt="Открыть меню">
+        </button>
+        <h2 class="h2 hide" id="h2">Тест на определение IQ</h2>
+
+        <div class="menu hide" id="menu">
+            <div class="menu__header">
+                <button onclick="toggleMenu()">
+                    <img src="./images/menu-close.svg" alt="Закрыть меню">
+                </button>
+            </div>
+            <div class="menu__main">
+                <a href="#" class="link" onclick="goToBegining()">Главная</a>
+                <a href="#info" class="link" onclick="goToInfo()">Информация о тесте</a>
+                <a href="#" class="link link-yellow" onclick="openTest()">Пройти тест</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section id="start">
+
+            <div class="one">
+                <div class="one__block1">
+                    <p class="one__go">Пройдите точный и быстрый </p>
+                    <h1 class="h1">Тест на определение IQ</h1>
+                </div>
+                <div class="one__block2"></div>
+                <div class="one__block3">
+                    <button class="btn" onclick="openTest()">Пройти тест</button>
+                    <div class="one__descr">
+                        <p class="yellow">И получите рекомендации по развитию своего интеллекта</p>
+                        <p">
+                            и улучшению финансового благосостояния и личной жизни</p>
+                    </div>
+                    <div class="toinfo">
+                        <button class="toinfo__btn">
+                            <a href="#info">
+                                <img src="./images/arrow.svg" alt="Информация о тесте">
+                            </a>
+                        </button>
+                        <span class="toinfo__span">Подробнее</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two" id="info">
+                <img src="./images/quotes.svg" alt="Цитата" class="two__img1">
+                <blockquote class="two__text">Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и выработать список рекомендаций для повышения этого показателя.</blockquote>
+                <img src="./images/quotes.svg" alt="Цитата" class="two__img2">
+            </div>
+
+            <div class="three">
+                <p class="three__p">
+                    Также по результатам теста <b class="big">вы получите</b> подробные <b class="big">советы</b> по определению наиболее перспективной <b class="big">для вашего типа </b><b>интеллекта</b><b class="big"> сферы деятельности</b>, которая принесет вам скорейший финансовый результат.
+                </p>
+                <img src="./images/start3.png" alt="Развитие интелекта">
+                <button class="btn" onclick="openTest()">Пройти тест</button>
+            </div>
+
+            <div class="four">
+                <p class="four__p1">
+                    Прохождение теста займет у вас не более 
+                    <span class="yellow">12 минут</span>
+                    , а его результаты вы сможете 
+                    <span class="yellow">использовать всю жизнь.</span>
+                </p>
+                <p class="four__p2">
+                    Профессиональная интерпретация и детально 
+                    <b>проработанные рекомендации </b>
+                    позволят вам качественно 
+                    <b>изменить все аспекты своей жизни: </b>
+                    от финансового до любовного.
+                </p>
+                <button class="btn btn-white" onclick="openTest()">Пройти тест</button>
+                <span class="copyright">© 2019</span>
+            </div>
+
+        </section>
+
+        <section class="test hide" id="test">
+            <div class="progress-bg">
+                <div class="progress-value" id="progress"></div>
+            </div>
+            <div class="questions">
+                <h3 class="h3" id="question"></h3>
+                <img src="" alt="Тест" class="questions__img hide" id="img">
+                <div class="answers1" id="answers" onclick="checkInput(event)">
+                </div>
+            </div>
+            <button class="btn" id="btn" disabled="false" onclick="nextPage()">Далее</button>
+        </section>
+
+        <section class="progressing hide" id="progressing">
+            <div class="progress-bg">
+                <div class="progress-value" width="100%"></div>
+            </div>
+            <h3 class="progressing__h3">Обработка результатов</h3>
+            <div class="progressing__wait"></div>
+            <p class="progressing__p">
+                Определение стиля мышления........... ........................................................
+            </p>
+        </section>
+
+        <section class="final hide" id="final">
+            <div class="final__block">
+                <h4 class="final__h4">Ваш результат рассчитан:</h4>
+                <p class="final__p1">
+                    <span class="underline">вы относитесь к 3%</span>
+                     респондентов, чей уровень интеллекта более чем на <br>15 пунктов отличается от среднего в большую или меньшую сторону!
+                </p>
+                <h5 class="final__h5">Скорее получите свой результат!</h5>
+                <p class="final__p2">
+                    В целях защиты персональных данных результат теста, их подробная интерпретация и рекомендации доступны в виде голосового сообщения по звонку с вашего мобильного телефона
+                </p>
+                <p class="final__p3">
+                    Звоните скорее, запись доступна всего
+                    <span class="timer" id="timer">10:00</span> минут
+                </p>
+                <button class="call" onclick="callAndList()">
+                    <img src="./images/call.svg" alt="Позвонить">
+                    <span class="call__span">Позвонить и прослушать результат</span>
+                </button>
+                <div class="result hide" id="result"></div>
+                <footer class="footer">
+                    <p class="footer__p">
+                        TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,
+                    </p>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="./test.js"></script>
+    <script src="./main.js"></script>
+    
+</body>
+</html>
