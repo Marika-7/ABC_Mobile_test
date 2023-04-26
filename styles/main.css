@@ -1,6 +1,29 @@
 @import url('reset.css');
 @import url('fonts.css');
 
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(13, 12, 17, 0.728);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(13, 12, 17, 0.728);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(13, 12, 17, 0.728); 
+}
+
+html {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
 /* ------- header ------- */
 
 .header {
@@ -11,13 +34,19 @@
     align-items: center;
 }
 
+.header__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .h2 {
     margin-left: 70px;
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
+    line-height: 0.9rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #FFC700;
@@ -37,7 +66,7 @@
 
 .h2-final {
     margin-left: 80px;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 23px;
     letter-spacing: 0.1em;
 }
@@ -73,8 +102,8 @@
 .link {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 1.4rem;
     text-transform: uppercase;
     color: #FFFFFF;
 }
@@ -84,6 +113,22 @@
 }
 
 /* ------- main ------- */
+
+.main {
+    width: 100%;
+    height: calc(100vh - 46px);
+    min-height: 500px;
+    background-image: url('../images/rain_bk2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.main:has(#start) {
+    overflow-y: scroll;
+}
 
 .btn {
     width: 189px;
@@ -112,24 +157,25 @@
     color: #fff;
 }
 
-.main {
-    color: #fff;
-}
-
 /* ------- start ------- */
 
 .one {
-    height: calc(100vmax - 46px);
+    height: calc(100vh - 46px);
     min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one__wrapper {
+    height: calc(100vh - 46px);
+    min-height: 450px;
+    max-height: 750px;
     padding: 30px 20px 10px;
-    background-image: url('../images/rain_bk2.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .one__block1 {
@@ -143,8 +189,8 @@
 .one__go {
     font-family: 'PT Serif', serif;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
     text-align: center;
     letter-spacing: 0.05em;
 }
@@ -155,12 +201,12 @@
     font-family: 'Yeseva One', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 1.9rem;
+    line-height: 2.2rem;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #FFC700;;
+    color: #FFC700;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -181,19 +227,19 @@
 }
 
 .one__descr {
-    width: 286px;
+    width: 18rem;
     margin-top: 11px;
     font-family: 'PT Serif';
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
     text-align: center;
     letter-spacing: 0.05em;
 }
 
 .yellow {
-    color: #FFC700;;
+    color: #FFC700;
 }
 
 .toinfo {
@@ -203,37 +249,46 @@
 }
 
 .toinfo__btn {
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     background-color: #ffffff;
 }
 
 .toinfo__span {
-    margin-top: 5px;
+    margin-top: 0.3rem;
     font-family: 'PT Serif';
     font-weight: 400;
-    font-size: 8px;
-    line-height: 11px;
+    font-size: 0.5rem;
+    line-height: 0.7rem;
     letter-spacing: 0.05em;
 }
 
 .two {
     height: 339px;
-    padding: 40px 30px 30px;
+    padding: 40px 0 30px;
     background-image: radial-gradient(84.34% 50.29% at 48.75% 49.71%, #2950C2 0%, rgba(38, 91, 199, 0.96) 40.62%, rgba(39, 98, 187, 0) 85.42%), url('../images/bg2.jpg');
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two__wrapper {
+    width: 100%;
+    max-width:18rem;
     display: flex;
     flex-direction: column;
 }
 
 .two__text {
-    width: 248px;
+    width: 15.5rem;
+    max-width: 300px;
     margin-top: 15px;
     font-family: 'Yeseva One';
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 23px;
     text-align: center;
     letter-spacing: 0.12em;
@@ -256,6 +311,13 @@
     padding: 40px 4vw;
     background: #F3F3F2;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.three__wrapper {
+    max-width: 500px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -265,9 +327,10 @@
     font-family: 'PT Serif';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     letter-spacing: 0.05em;
+    text-align: center;
     color: #272727;
 }
 
@@ -277,25 +340,31 @@
 
 .four {
     width: 100%;
-    height: 533px;
     padding: 50px 4vw 10px;
-    background-image: url('../images/lightning_left.png'), url('../images/lightning_right.png'), url('../images/rain_bk2.jpg');
-    background-size: auto, auto, cover;
+    background-image: url('../images/lightning_left.png'), url('../images/lightning_right.png');
+    background-size: auto, auto;
     background-repeat: no-repeat;
     background-position: 0% 90%, 100% 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.four__wrapper {
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
 }
 
 .four__p1 {
-    max-width: 500px;
-    padding: 0 4vw;
+    width: 16rem;
     font-family: 'Merriweather';
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
     letter-spacing: 0.05em;
 }
 
@@ -304,13 +373,12 @@
 }
 
 .four__p2 {
-    height: 216px;
-    padding: 30px 5vw;
+    padding: 30px 15px;
     background: rgba(243, 243, 242, 0.8);
     border-radius: 20px;
     font-family: 'Merriweather';
     font-weight: 400;
-    font-size: 15px;
+    font-size: 0.9rem;
     line-height: 23px;
     letter-spacing: 0.05em;
     color: #181818;
@@ -321,7 +389,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 0.6rem;
     line-height: 23px;
     text-align: center;
     letter-spacing: 0.05em;
@@ -331,9 +399,20 @@
 /* ------- test ------- */
 
 .test {
-    height: calc(100vmax - 46px);
-    padding: 15px 0 25px;
+    height: calc(100vh - 46px);
     background-image: linear-gradient(rgba(13, 12, 17, 0.728), rgba(13, 12, 17, 0.728)), url('../images/rain_bk2.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test__wrapper {
+    width: 100%;
+    max-width: 500px;
+    height: calc(100vh - 46px);
+    min-height: 500px;
+    max-height: 600px;
+    padding: 3vh 0 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -365,11 +444,12 @@
 }
 
 .h3 {
+    max-width: 400px;
     padding: 0 15px;
     font-family: 'PT Serif', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
     text-align: center;
     letter-spacing: 0.05em;
 }
@@ -392,7 +472,7 @@
     font-family: 'PT Serif';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.1rem;
     letter-spacing: 0.05em;
     display: flex;
     justify-content: flex-start;
@@ -449,6 +529,7 @@
 
 .answers3 {
     width: 100%;
+    max-width: 400px;
     padding: 20px 15px 0;
     border-top: 4px solid rgba(242, 243, 243, 0.15);
     display: flex;
@@ -462,8 +543,8 @@
     border: 6px solid #fff;
     font-family: 'PT Serif';
     font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
     text-align: center;
     color: #0D0C11;
 }
@@ -480,9 +561,20 @@
 /* ------- final ------- */
 
 .progressing {
-    height: calc(100vmax - 46px);
-    padding: 15px 0 30vh;
+    height: calc(100vh - 46px);
     background-image: linear-gradient(rgba(13, 12, 17, 0.728), rgba(13, 12, 17, 0.728)), url('../images/rain_bk2.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressing__wrapper {
+    width: 100%;
+    max-width: 500px;
+    height: calc(100vh - 46px);
+    min-height: 500px;
+    max-height: 600px;
+    padding: 3vh 0 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -493,8 +585,8 @@
     width: 200px;
     font-family: 'PT Serif';
     font-weight: 400;
-    font-size: 23px;
-    line-height: 30px;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
     text-align: center;
     letter-spacing: 0.05em;
 }
@@ -516,42 +608,43 @@
 }
 
 .progressing__p {
-    width: 276px;
+    width: 18rem;
     font-family: 'PT Serif';
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0.9rem;
     line-height: 19px;
     letter-spacing: 0.05em;
 }
 
 .final {
-    min-height: calc(100vmax - 46px);
+    height: calc(100vh - 46px);
     background-image: 
         url('../images/lightning_left2.png'), 
         url('../images/lightning_right2.png'), 
-        linear-gradient(rgba(13, 12, 17, 0.728), rgba(13, 12, 17, 0.728)),
-        url('../images/rain_bk2.jpg');
-    background-size: auto, auto, auto, cover;
+        linear-gradient(rgba(13, 12, 17, 0.728), rgba(13, 12, 17, 0.728));
+    background-size: auto, auto, auto;
     background-repeat: no-repeat;
     background-position: 0% 90%, 100% 100%;
-    overflow: scroll
+    overflow-y: scroll;
 }
 
 .final__block {
     width: 100%;
-    height: calc(100vmax - 46px);
+    height: calc(100vh - 46px);
+    min-height: 500px;
     padding: 30px 15px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 0.9rem;
 }
 
 .final__h4 {
     font-family: 'PT Serif';
     font-weight: 700;
-    font-size: 15px;
-    line-height: 16px;
+    font-size: 0.9rem;
+    line-height: 1rem;
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -561,8 +654,8 @@
     width: 260px;
     font-family: 'PT Serif';
     font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
     text-align: center;
 }
 
@@ -573,8 +666,8 @@
 .final__h5 {
     font-family: 'PT Serif';
     font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -582,15 +675,14 @@
 }
 
 .final__p2 {
-    width: 256px;
-    height: 114px;
+    width: 16rem;
     padding: 15px;
     background-color: #1C2741;
     border-radius: 6px;
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 8px;
-    line-height: 14px;
+    font-size: 0.5rem;
+    line-height: 0.9rem;
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -600,8 +692,8 @@
     width: 240px;
     font-family: 'PT Serif';
     font-weight: 400;
-    font-size: 11px;
-    line-height: 20px;
+    font-size: 0.7rem;
+    line-height: 1.25rem;
     text-align: center;
     letter-spacing: 0.1em;
     color: #3BDE7C;
@@ -609,13 +701,13 @@
 
 .timer {
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .call {
     width: 290px;
     height: 90px;
-    padding: 12px;
+    padding: 30px 15px;
     background: #EB1B00;
     border-radius: 5px;
     display: flex;
@@ -627,8 +719,8 @@
     width: 200px;
     font-family: 'Roboto';
     font-weight: 900;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
     text-align: left;
     letter-spacing: 0.05em;
     color: #FFFFFF;
@@ -643,8 +735,8 @@
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 14px;
+    font-size: 1.25rem;
+    line-height: 0.9rem;
     text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -662,24 +754,24 @@
 }
 
 .result a {
-    color:#46B2AC;;
+    color:#46B2AC;
 }
 
 .footer {
     width: 290px;
-    height: 18px;
-    overflow: scroll;
 }
 
 .footer__p {
+    height: 1.1rem;
     font-family: 'Roboto';
     font-weight: 400;
-    font-size: 7px;
-    line-height: 9px;
+    font-size: 0.4rem;
+    line-height: 0.6rem;
     text-align: center;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.5);
+    overflow-y: scroll;
 }
 
 .hide {

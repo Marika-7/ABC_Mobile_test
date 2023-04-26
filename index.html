@@ -13,7 +13,9 @@
         <button onclick="toggleMenu()">
             <img src="./images/menu-open.svg" alt="Открыть меню">
         </button>
-        <h2 class="h2 hide" id="h2">Тест на определение IQ</h2>
+        <div class="header__wrapper">
+            <h2 class="h2 hide" id="h2">Тест на определение IQ</h2>
+        </div>
 
         <div class="menu hide" id="menu">
             <div class="menu__header">
@@ -34,85 +36,97 @@
         <section id="start">
 
             <div class="one">
-                <div class="one__block1">
-                    <p class="one__go">Пройдите точный и быстрый </p>
-                    <h1 class="h1">Тест на определение IQ</h1>
-                </div>
-                <div class="one__block2"></div>
-                <div class="one__block3">
-                    <button class="btn" onclick="openTest()">Пройти тест</button>
-                    <div class="one__descr">
-                        <p class="yellow">И получите рекомендации по развитию своего интеллекта</p>
-                        <p">
-                            и улучшению финансового благосостояния и личной жизни</p>
+                <div class="one__wrapper">
+                    <div class="one__block1">
+                        <p class="one__go">Пройдите точный и быстрый </p>
+                        <h1 class="h1">Тест на определение IQ</h1>
                     </div>
-                    <div class="toinfo">
-                        <button class="toinfo__btn">
-                            <a href="#info">
-                                <img src="./images/arrow.svg" alt="Информация о тесте">
-                            </a>
-                        </button>
-                        <span class="toinfo__span">Подробнее</span>
+                    <div class="one__block2"></div>
+                    <div class="one__block3">
+                        <button class="btn" onclick="openTest()">Пройти тест</button>
+                        <div class="one__descr">
+                            <p class="yellow">И получите рекомендации по развитию своего интеллекта</p>
+                            <p">
+                                и улучшению финансового благосостояния и личной жизни</p>
+                        </div>
+                        <div class="toinfo">
+                            <button class="toinfo__btn">
+                                <a href="#info">
+                                    <img src="./images/arrow.svg" alt="Информация о тесте">
+                                </a>
+                            </button>
+                            <span class="toinfo__span">Подробнее</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="two" id="info">
-                <img src="./images/quotes.svg" alt="Цитата" class="two__img1">
-                <blockquote class="two__text">Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и выработать список рекомендаций для повышения этого показателя.</blockquote>
-                <img src="./images/quotes.svg" alt="Цитата" class="two__img2">
+                <div class="two__wrapper">
+                    <img src="./images/quotes.svg" alt="Цитата" class="two__img1">
+                    <blockquote class="two__text">Профессиональный IQ-тест позволяет не только определить коэффициент вашего интеллекта, но и выработать список рекомендаций для повышения этого показателя.</blockquote>
+                    <img src="./images/quotes.svg" alt="Цитата" class="two__img2">
+                </div>
             </div>
 
             <div class="three">
-                <p class="three__p">
-                    Также по результатам теста <b class="big">вы получите</b> подробные <b class="big">советы</b> по определению наиболее перспективной <b class="big">для вашего типа </b><b>интеллекта</b><b class="big"> сферы деятельности</b>, которая принесет вам скорейший финансовый результат.
-                </p>
-                <img src="./images/start3.png" alt="Развитие интелекта">
-                <button class="btn" onclick="openTest()">Пройти тест</button>
+                <div class="three__wrapper">
+                    <p class="three__p">
+                        Также по результатам теста <b class="big">вы получите</b> подробные <b class="big">советы</b> по определению наиболее перспективной <b class="big">для вашего типа </b><b>интеллекта</b><b class="big"> сферы деятельности</b>, которая принесет вам скорейший финансовый результат.
+                    </p>
+                    <img src="./images/start3.png" alt="Развитие интелекта">
+                    <button class="btn" onclick="openTest()">Пройти тест</button>
+                </div>
             </div>
 
             <div class="four">
-                <p class="four__p1">
-                    Прохождение теста займет у вас не более 
-                    <span class="yellow">12 минут</span>
-                    , а его результаты вы сможете 
-                    <span class="yellow">использовать всю жизнь.</span>
-                </p>
-                <p class="four__p2">
-                    Профессиональная интерпретация и детально 
-                    <b>проработанные рекомендации </b>
-                    позволят вам качественно 
-                    <b>изменить все аспекты своей жизни: </b>
-                    от финансового до любовного.
-                </p>
-                <button class="btn btn-white" onclick="openTest()">Пройти тест</button>
-                <span class="copyright">© 2019</span>
+                <div class="four__wrapper">
+                    <p class="four__p1">
+                        Прохождение теста займет у вас не более
+                        <span class="yellow">12 минут</span>
+                        , а его результаты вы сможете
+                        <span class="yellow">использовать всю жизнь.</span>
+                    </p>
+                    <p class="four__p2">
+                        Профессиональная интерпретация и детально
+                        <b>проработанные рекомендации </b>
+                        позволят вам качественно
+                        <b>изменить все аспекты своей жизни: </b>
+                        от финансового до любовного.
+                    </p>
+                    <button class="btn btn-white" onclick="openTest()">Пройти тест</button>
+                    <span class="copyright">© 2019</span>
+                </div>
             </div>
 
         </section>
 
         <section class="test hide" id="test">
-            <div class="progress-bg">
-                <div class="progress-value" id="progress"></div>
-            </div>
-            <div class="questions">
-                <h3 class="h3" id="question"></h3>
-                <img src="" alt="Тест" class="questions__img hide" id="img">
-                <div class="answers1" id="answers" onclick="checkInput(event)">
+            <div class="test__wrapper">
+                <div class="progress-bg">
+                    <div class="progress-value" id="progress"></div>
                 </div>
+                <div class="questions">
+                    <h3 class="h3" id="question"></h3>
+                    <img src="" alt="Тест" class="questions__img hide" id="img">
+                    <div class="answers1" id="answers" onclick="checkInput(event)">
+                    </div>
+                </div>
+                <button class="btn" id="btn" disabled="false" onclick="nextPage()">Далее</button>
             </div>
-            <button class="btn" id="btn" disabled="false" onclick="nextPage()">Далее</button>
         </section>
 
         <section class="progressing hide" id="progressing">
-            <div class="progress-bg">
-                <div class="progress-value" width="100%"></div>
+            <div class="progressing__wrapper">
+                <div class="progress-bg">
+                    <div class="progress-value" width="100%"></div>
+                </div>
+                <h3 class="progressing__h3">Обработка результатов</h3>
+                <div class="progressing__wait"></div>
+                <p class="progressing__p">
+                    Определение стиля мышления........... ........................................................
+                </p>
             </div>
-            <h3 class="progressing__h3">Обработка результатов</h3>
-            <div class="progressing__wait"></div>
-            <p class="progressing__p">
-                Определение стиля мышления........... ........................................................
-            </p>
         </section>
 
         <section class="final hide" id="final">
@@ -134,7 +148,7 @@
                     <img src="./images/call.svg" alt="Позвонить">
                     <span class="call__span">Позвонить и прослушать результат</span>
                 </button>
-                <div class="result hide" id="result"></div>
+                <div class="result" id="result"></div>
                 <footer class="footer">
                     <p class="footer__p">
                         TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,
